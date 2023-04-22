@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <!-- Move to up button -->
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!-- navgaition menu -->
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Portfolio^</a></div>
+      <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+      <div class="media-icons">
+        <a href="https://www.linkedin.com/in/monisha-b-b3a959272"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text">
+        <div class="text-one">Hello,</div>
+        <div class="text-two">I'm Monisha B</div>
+        <div class="text-three">Front-End Web Developer</div>
+        <div class="text-four">From Bangalore</div>
+      </div>
+      <div class="button">
+        <button><a href="#about">About Me</a></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section Start -->
+  <section class="about" id="about">
+    <div class="content">
+      <h1 class="heading"> <span>About</span> Me </h1>
+    <div class="about-details">
+      <div class="left">
+        <img src="images/o7o7.jpeg" alt="">
+      </div>
+      <div class="right">
+        <div class="info ">
+            <h3> <span> name : </span>Monisha B </h3>
+            <h3> <span> age : </span> 20 </h3>
+            <h3> <span> qualification : </span> BE </h3>
+            <h3> <span> gender : </span> female </h3>
+            <h3> <span> language : </span> English </h3>
+            
+        </div>
+        <div class="button">
+          <a href="./Keerthana DR_resume.pdf" download><button class="btn"> download CV <i class="fas fa-download"></i> </button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="education" id="education">
+
+    <h1 class="heading"> My <span>Education</span> </h1>
+    
+    <div class="box-container">
+    
+        <div class="box hidden">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2015</span>
+            <h3>Balu Public School</h3>
+            <p>I completed my Schooling in CPT,Ramanagara. </p>
+        </div>
+    
+        <div class="box hidden">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2018</span>
+            <h3>Cambridge PU College</h3>
+            <p>I completed my higher education in Cambridge pu college, Ramanagara with good grades.</p>
+        </div>
+    
+        <div class="box hidden">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2020</span>
+            <h3>Nitte Meenakshi Institue Of Technology</h3>
+            <p>Currently I am pursuing education in Nitte Meenakshi Institue Of Technology </p>
+        </div>
+    </div>
+
+  <section class="portfolio" id="portfolio">
+
+      <h1 class="heading"> My <span>Projects</span> </h1>
+      
+      <div class="box-container hidden">
+      
+          <div class="box">
+              <img src="images/portfolio1.jpg" alt="">
+          </div>
+      
+          <div class="box">
+              <img src="images/portfoli22.jpg" alt="">
+          </div>
+      
+          <div class="box">
+            <img src="images/portfolio3.jpg" alt="">
+        </div>
+      </div>
+      
+      </section>
+      <section class="contact " id="contact">
+
+        <h1 class="heading"> <span>Contact</span> info </h1>
+        
+        <div class="row">
+        
+            <div class="content hidden">
+        
+        
+            <div class="info ">
+                <h3> <i class="fas fa-envelope"></i> monishabasavaraju27@gmail.com </h3>
+                <h3> <i class="fas fa-phone"></i> 7483505167 </h3>
+                <h3> <i class="fas fa-map-marker-alt"></i> Karnataka, India - 560064. </h3>
+            </div>
+    
+        </div>
+
+
+
+
+     <!-- website scroll animation -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry)=>{
+      console.log(entry)
+      if (entry.isIntersecting){
+          entry.target.classList.add('show');
+      } else{
+          entry.target.classList.remove('show');
+      }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((e1)=> observer.observe(e1));
+</script>
